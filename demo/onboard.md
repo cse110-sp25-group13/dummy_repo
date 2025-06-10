@@ -45,6 +45,28 @@ https://cse110-sp25-group13.github.io/The_club_triton/docs/
 
 ## CI/CD
 
+### CI Pipeline (``main.yml``)
+Fires on every PR and manual trigger.
+- ESLint + Prettier keep the code clean.
+- W3C HTML validator catches broken markup.
+- Jest runs unit tests & uploads coverage.
+- Puppeteer drives end-to-end tests in headless Chrome.
+  
+If any stage fails, the PR gets a red X. 
+
+### JSDoc Generation (``doc.yml``)
+When a PR is merged into ``develop``, the job rebuilds API docs with jsdoc, and commits the ``docs/`` folder back to the branch.
+
+### Deploy flow (``deploy.yml``)
+When a PR is merged into ``main``, the job extracts the ``docs/`` folder and flattens ``src/``, and pushes all of those files to the ``deploy`` branch.
+
+### GitHub Pages build
+After the deploy flow completes succesfully, the GitHub Pages build takes the ``deploy`` branch and deploys it.
+
+### Post-deploy quality checks
+- Lighthouse CI (``lh.yml``) audits the live site for performance, accessibility, and Progressive Web App (PWA) scores against a budget. 
+- With Playwright (``playwright.yml``), we run browser smoke tests on Chrome, Firefox, and Safari against the published URL to be sure nothing broke in production.
+
 ## Retro + advice
 
 - Heightlight of Agile
