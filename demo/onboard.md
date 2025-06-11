@@ -43,18 +43,45 @@ This guide explains how to understand and modify the homepage and navbar compone
 
 ---
 
-## 🏠 Homepage
 
-**Location**: `pages/home-page.html`  
-**Stylesheet**: `styles/home-page-styles.css`
+## 🧠 Homepage Breakdown (`home-page.html`)
 
-### Structure
+This is the landing page of the app. It includes:
 
-- **Navbar placeholder**:
+- A background image set via CSS.
+- A dynamic navbar inserted via `load-navbar.js`.
+- A **game title** with animated slide effects (`slide`, `offset-slide`).
+- A **floating description box** with bounce animation (`bounce`) that explains game rules.
+
+Key classes include:
+
+- `.game-title`, `.game-title-offset` — use `Luckiest Guy` font with slide animations
+- `.description` — instructions with bounce animation and styled white bubble
+- `.instructions`, `.instructions-header` — styled with `Coming Soon` and `Luckiest Guy`
+
+---
+
+## 🔼 Navbar Overview (`navbar.css`)
+
+The navbar is an absolutely positioned flex container with links to main pages.
+
+- Background color: `#FFE375`
+- Rounded bottom edges
+- Logo: `navbar-logo.png`
+- Responsive layout using `vh`/`vw` units
+- Animates on hover (`scale` and background color shift)
+
+Structure:
 
 ```html
-<div id="navbar-container"></div
-```
+<nav class="navbar">
+  <ul class="nav-button-container">
+    <img class="navbar-logo" src="../imgs/navbar-logo.png" />
+    <li class="nav-button"><a href="../pages/home-page.html">Home</a></li>
+    <li class="nav-button"><a href="../pages/game-page.html">Play</a></li>
+    <li class="nav-button"><a href="../pages/collection-page.html">Collection</a></li>
+  </ul>
+</nav>
 ## Collection page tour
 
 ## Game page
