@@ -54,7 +54,7 @@ This guide explains how to understand and modify the homepage and navbar compone
 
 ```html
 <div id="navbar-container"></div
-
+```
 ## Collection page tour
 
 ## Game page
