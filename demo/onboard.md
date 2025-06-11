@@ -37,12 +37,6 @@ The_club_triton/
 ## Documentation of our code
 https://cse110-sp25-group13.github.io/The_club_triton/docs/
 
-## 🧭 Homepage & Navbar
-
-This guide explains how to understand and modify the homepage and navbar components of the Club Triton project.
-
----
-
 
 ## 🧠 Homepage Breakdown (`home-page.html`)
 
