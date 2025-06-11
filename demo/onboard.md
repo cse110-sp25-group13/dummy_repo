@@ -73,7 +73,7 @@ The navbar is an absolutely positioned flex container with links to main pages.
 
 Structure:
 
-```html
+```
 <nav class="navbar">
   <ul class="nav-button-container">
     <img class="navbar-logo" src="../imgs/navbar-logo.png" />
@@ -82,6 +82,7 @@ Structure:
     <li class="nav-button"><a href="../pages/collection-page.html">Collection</a></li>
   </ul>
 </nav>
+```
 ## Collection page tour
 
 ## Game page
